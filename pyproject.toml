@@ -1,0 +1,10 @@
+[project]
+name = "ga4-mcp"
+version = "0.1.0"
+description = "Custom GA4 MCP server for CIM analytics"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-analytics-data>=0.18.0",
+    "google-analytics-admin>=0.22.0",
+]
