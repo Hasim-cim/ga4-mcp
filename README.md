@@ -42,6 +42,12 @@ team lead for the `credentials.json` file, then point
 export GOOGLE_APPLICATION_CREDENTIALS="/path/to/ga4-mcp/credentials.json"
 ```
 
+macOS/Linux Terminal from the repo root:
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/credentials.json"
+```
+
 PowerShell:
 
 ```powershell
@@ -60,14 +66,20 @@ For a teammate using Claude Code/Desktop:
    Bitwarden, Google Drive with restricted access, or direct handoff.
 3. Place `credentials.json` in the repo root.
 4. Run `uv sync`.
-5. In PowerShell, run:
+5. In macOS/Linux Terminal, run:
+
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="$(pwd)/credentials.json"
+```
+
+6. In PowerShell, run:
 
 ```powershell
 $env:GOOGLE_APPLICATION_CREDENTIALS = (Resolve-Path .\credentials.json)
 ```
 
-6. Open the repo in Claude Code/Desktop.
-7. Ask Claude to use `/ga4-analytics` or ask natural questions like:
+7. Open the repo in Claude Code/Desktop.
+8. Ask Claude to use `/ga4-analytics` or ask natural questions like:
 
 - "How many visitors are on cim.io right now?"
 - "Show me the top pages this month"
